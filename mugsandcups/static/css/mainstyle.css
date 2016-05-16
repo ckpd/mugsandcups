@@ -1,0 +1,232 @@
+a:hover{
+    text-decoration: none;
+}
+
+body{
+    border-top: 5px solid #16a085; 
+	font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto';
+
+}
+
+.navbar{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto; 
+    font-size: 1.2em;
+
+  }
+.navbar a{
+    color: grey;
+
+  }
+.logo {
+    width: 90px;
+    height: 55px;    
+}
+.nav li{
+    padding-top: 10px;
+    
+}
+
+
+.type{
+    text-align: left;
+    font-size: 1.5em;
+    color: white;
+    text-transform: capitalize;
+}
+
+.boldtype{
+    font-weight: bold;
+    color: white;
+
+}
+
+.subtype{
+    text-align: left;
+    font-size: 1.2em;
+    color: white;
+    border-bottom: 5px solid #16a085; 
+
+}
+.welcome {
+    margin-top: 10%;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    overflow: hidden;
+    width: 60%;
+    text-align: left;
+
+}
+
+.main{
+    width: 100%;    
+    height: 400px;
+    background: url(../img/cta-bg.jpg);
+    background-position: top;
+    background-size: cover;
+    box-shadow: 1px 2px 10px 1px rgba(1,0,0,0.53);
+    overflow: hidden;
+
+}   
+.CallToAction{
+    width: 100%;    
+    height: 120px;
+    background: #16a085;
+    box-shadow: 1px 2px 10px 1px rgba(1,0,0,0.53);
+    text-align: center;
+
+}
+
+.CallToAction h1{
+    text-align: center;
+    color: white;
+    font-family: 'Roboto';
+    
+}
+
+
+
+.phoneRound{
+    border: 2px solid white;
+    background: white;
+    color: black;
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    padding-top: 10px;
+    margin-right: 10px;
+    text-align: center;
+
+}
+.space{
+    height: 10px;
+}
+.showcase,.testimonials {
+    text-transform: capitalize;
+    color: grey;
+    font-family: 'Roboto';
+
+}
+.showcase img{
+    display: inline;
+     border-top: 5px solid #c0392b; 
+    margin-top: 5px;
+
+}
+.showcase img:hover{
+    display: inline;
+     border-top: 5px solid #27ae60; 
+
+}
+.btn, .btn-warning, .btn-lg{
+    border-radius: 0px;
+    margin-right: 0px;
+    width: 250px;
+    background: #16a085;
+}
+.left{
+    text-align: left;
+}
+.testimonialtag{
+    text-transform: capitalize;
+    color: grey;
+    background: ;
+    height: 150px;
+    box-shadow: 2px 2px 10px 2px rgba(1,0,0,0.53);
+
+}
+.clientline{
+    background: #e74c3c;
+    color: white;
+}
+
+.clientline h1{
+    padding-left: 10px;
+}
+
+.clients{
+    box-shadow: 1px 2px 10px 1px rgba(1,0,0,0.53);
+}
+.clients li{
+    list-style: none;
+    display: inline;
+    padding: 5px;
+  
+}
+.clients img{
+    width: 150px;
+    height: 150px;
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+    opacity: 0.7;
+
+}
+.footer{
+    border-top: 5px solid #27ae60; 
+    text-align: center;
+
+}
+.footerlogo img{
+    width: 70px;
+    height: 50px;
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+    opacity: 0.6;
+}
+.footerline{
+  border-right: 2px solid lightgrey;
+}
+.footerhead{
+    margin-top: 0px;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.footernav li{
+    color: black;
+    display: inline;
+    list-style: none;
+    padding: 10px;
+ }
+.footernav ul{
+   text-align: center;
+     }
+.footer p{
+    margin-top: 20px; 
+}
+.item {
+  display: none;
+    color: black;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1024px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 20px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+
+    /*default so you don't need this*/
+    div[class^="col"]{padding-left:5px; padding-right:5px;}
+    .container{padding-left:5px; padding-right:5px;}
+    .row {
+    margin-left: 0;
+    margin-right: 0;
+    }
+
+}
+

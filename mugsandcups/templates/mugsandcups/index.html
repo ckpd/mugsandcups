@@ -1,0 +1,109 @@
+{% extends 'mugsandcups/base.html' %}
+{% block content %}
+
+<div class="space"></div>
+
+<div class="main">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="col-md-12 actioncall">
+                     <div class=" container welcome">
+          <p class="type"><span>The fine art of <span class="boldtype">Personalizing memories</span>  for all <span  class="boldtype"> events</span> and <span class="boldtype"> occasions.</span></span></p>
+          <p class="subtype">Mugs And Cups Grenada</p>
+      </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="CallToAction">
+    <div class="row">
+        <div class="col-md-12 ">
+            <a href="{% url 'mugsandcups:contact' %}"><h1><span class="glyphicon glyphicon-earphone phoneRound"></span>Let us customize your accessories for your next event</h1></a>
+        </div>
+    </div>
+</div>
+
+<div class="space"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 ">
+            <h1 class="showcase ">Featured</h1>
+            <hr>
+        </div>
+    </div>
+</div>
+{% load staticfiles %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 showcase">
+                {% for Features in Features %}
+                    <img src="/media/{{Features.title}}.jpg" alt="{{Features.title}}" class="img-responsive ">
+                {% endfor %}
+        </div>
+    </div>
+
+</div>
+<div class="space"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+                    <p style="text-align:center;"><a class="btn btn-success btn-lg" href="{% url 'mugsandcups:catalog' %}" role="button">Go To Catalog</a></p>
+        </div>
+    </div>
+   <hr>
+</div>
+
+<div class="container">
+
+    
+    
+    
+    <div class="row">
+            <div class="col-md-3 testimonials left">
+            <h1>Testimonials</h1>
+            <p>this is what our clients are saying about us.</p>
+        </div>
+     <div class="testimonials col-md-9">
+        <div class="item"> 
+            <blockquote>
+                <p><strong>to cite (verb)</strong>: to acknowledge (give credit to) the original author or artist by providing a reference.</p>
+                <cite>Someone Said<br />
+                <a href="#"></a></cite> </blockquote>
+            </div>
+            <div class="item">
+                <blockquote>
+                    <p><strong>citation (noun)</strong>: a properly formatted line of text that indicates the source for a quote, idea, fact etc. that you use.</p>
+                    <cite>Someone Said<br />
+                    <a href="#"></a></cite> 
+                </blockquote>
+             </div>
+        </div> 
+    </div>
+    <hr>
+</div>
+<div class="space"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 clientline">
+            <h1 class="showcase clientline ">Our Clients</h1>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 clients">
+            <div class="space"></div>
+
+            <ul>
+                {% for testimonial in testimonials %}
+                    <li><img src="/media/{{testimonial.title}}.jpg" alt="{{testimonial.title}}"></li>
+                {% endfor %}
+            </ul>
+    </div>
+</div>
+</div>
+            <div class="space"></div>
+
+
+{% endblock %}

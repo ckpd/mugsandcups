@@ -1,0 +1,62 @@
+{% extends 'mugsandcups/base.html' %}
+{% block content %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/gallery.css' %}"/>
+<div class="space"></div>
+
+<div class="main">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="col-md-12 actioncall">
+
+      <div class="container welcome">
+          <p class="type"><span>We Take Pride <span class="boldtype">In Our Products</span>  And Services <span  class="boldtype"> </span> <span class="boldtype"> </span></span></p>
+          <p class="subtype">This Is Our Catalog</p>
+      </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="CallToAction">
+    <div class="row">
+        <div class="col-md-12 ">
+           <h1><span class="glyphicon glyphicon-heart phoneRound"></span>Take A Look At Our Products</h1>
+            </div>
+    </div>
+</div>
+<div class="space"></div>
+<div class="container">
+    <div class="row ">
+        <div class="col-md-12">
+	       <div class="filter">
+				<div>
+                    <span>Filter photos by categories: </span>
+					<a href="#" class="sortLink selected" data-category="all">All</a>
+					<a href="#" class="sortLink" data-category="Mugs">Mugs</a>
+					<a href="#" class="sortLink" data-category="Cups">Cups</a>
+					<a href="#" class="sortLink" data-category="Pens">Pens</a>
+					<a href="#" class="sortLink" data-category="Other">Other</a>
+					<div class="clear_floats"></div>
+				</div>
+			</div>
+
+			<div class="photos">
+				
+				<div class="thumbnail_wrap">
+                    {% for catalog in catalogs %}
+
+					   <a href="/media/{{catalog.title}}.jpg" class="thumbnail" data-categories="{{catalog.data_categorie}}" title="{{catalog.title}}">
+						<img src="/media/{{catalog.title}}.jpg" alt="{{catalog.title}}" class="thumb">
+					</a>
+                    {% endfor %}
+				</div><!-- .thumbnail_wrap end -->
+
+			</div><!-- .photos end -->
+    </div>
+    </div>
+</div>
+</div>
+    <script src="{% static 'inc/fancybox/jquery.fancybox.js' %}"></script>
+    <script src="{% static 'inc/gallery.js' %}"></script>
+
+{% endblock %}

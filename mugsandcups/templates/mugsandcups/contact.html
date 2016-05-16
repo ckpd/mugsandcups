@@ -1,0 +1,66 @@
+{% extends 'mugsandcups/base.html' %}
+{% block content %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+<div class="space"></div>
+<div class="main">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="col-md-12 actioncall">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="space"></div>
+<div class="container">
+<div class="row ">
+    <div class="col-md-12">
+    <div class="col-md-12 shadow">
+        <div class="col-md-5">
+            <h3 class="cap">Have a project or a question?</h3>
+            <h4>Please use the contact form below.</h4>
+            <div class="space"></div>
+
+        <form role="form" action="" method="post">
+            {% csrf_token %}
+            {% crispy form %}
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+          <div class="col-md-4">
+              <h3 class="cap">Contact Information</h3>
+            <h4>Fitzroy Auguste</h4>
+              <h4>Woodlands</h4>
+              <h4>St. George, Grenada</h4>
+              <h4>West Indies</h4>
+              <br>
+              <h4><span class="glyphicon glyphicon-earphone"></span> (473)-405-2998</h4>
+              <h4><span class="glyphicon glyphicon-envelope"></span> mugsandcups@gmail.com</h4>  
+              <br>
+
+        </div>
+            <div class="col-md-3">
+              <h3 class="cap">Follow Us</h3>
+
+            <h4>Facebook</h4>
+         
+              <br>
+
+        </div>
+    </div>
+</div>
+</div>
+        
+    <div class="space" ></div>
+
+
+
+    
+</div>
+<div class="space" ></div>
+<div class="space" ></div>
+
+{% endblock %}
+

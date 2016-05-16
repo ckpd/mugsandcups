@@ -1,0 +1,72 @@
+{% load staticfiles %}
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Mugs and Cups Grenada{% endblock %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mainstyle.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/inc/fancybox/jquery.fancybox.css' %}"/>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+  
+      
+ 
+  </head>
+  <body>
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+ 
+    <!-- Add your site or application content here -->
+      
+   <nav class="navbar">
+
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                 <a class="navbar-brand" href="{% url 'mugsandcups:index' %} "><img class="logo" src="{% static 'img/logo.png' %}" alt="logo"></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="{% url 'mugsandcups:index' %}">Home</a></li>
+            <li><a href="{% url 'mugsandcups:catalog' %}">Our Catalog</a></li>
+            <li><a href="{% url 'mugsandcups:about' %}">About Us</a></li>
+            <li><a href="{% url 'mugsandcups:contact' %}">Contact</a></li>
+            <li class="link follow"><a href="#/">Follow Us</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+      
+      {% block content %}
+      {% endblock %}
+      
+      <div class="footer">
+        <div class="footernav">
+            <div class="space"></div>
+
+          <ul>
+            <li><a href="{% url 'mugsandcups:index' %}">Home</a></li>
+            <li><a href="{% url 'mugsandcups:catalog' %}">Our Catalog</a></li>
+            <li><a href="{% url 'mugsandcups:about' %}">About Us</a></li>
+            <li><a href="{% url 'mugsandcups:contact' %}">Contact</a></li>
+            <li class="link follow"><a href="#/">Follow Us</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+        <p><span class="glyphicon glyphicon-heart"></span> All Rights reserved mugs and cups GRENADA</p>
+
+      </div>
+</body>
+</html>

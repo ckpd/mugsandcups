@@ -1,0 +1,40 @@
+
+p{
+    font-family: 'Roboto';
+}
+.heading{
+    margin-top: 5%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.heading h1{
+    color: white;
+    font-size: 38px;
+    margin-bottom: 10%;
+    padding-bottom: 5px;
+    border-bottom: 2px solid;
+}
+ol{
+    text-align: left;
+    color: white;
+    font-size: 28px;
+    list-style-type: decimal-leading-zero;
+    padding-left: 10%;
+    text-transform: capitalize;
+}
+
+
+.addNew span{
+    font-size: 800%;
+    color: #F2F089 ;
+}
+.line{
+    width: 300px;
+}
+.line a{
+    display: inline;
+}
+
+
