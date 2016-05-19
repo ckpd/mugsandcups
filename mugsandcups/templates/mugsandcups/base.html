@@ -11,24 +11,23 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/mainstyle.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/inc/fancybox/jquery.fancybox.css' %}"/>
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mainstyle.css' %}"/>
+
     <script src="{% static 'js/main.js' %}"></script>
-  
-      
- 
+
   </head>
   <body>
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
- 
-    <!-- Add your site or application content here -->
-      
-   <nav class="navbar">
 
-      <div class="container">
+    <!-- Add your site or application content here -->
+
+   <nav class="navbar">
+               <div class="container">
+
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -46,13 +45,13 @@
             <li><a href="{% url 'mugsandcups:contact' %}">Contact</a></li>
             <li class="link follow"><a href="#/">Follow Us</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+        </div>
+       </div><!--/.nav-collapse -->
     </nav>
-      
+
       {% block content %}
       {% endblock %}
-      
+
       <div class="footer">
         <div class="footernav">
             <div class="space"></div>

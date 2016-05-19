@@ -3,18 +3,14 @@ a:hover{
 }
 
 body{
-    border-top: 5px solid #e74c3c ;
+    border-top: 5px solid #1BA39C;
 	font-family: Arial, Helvetica, sans-serif;
     font-family: 'Roboto';
     width: 100%;
 }
 
 .navbar{
-    margin-left: auto;
-    margin-right: auto;
     font-size: 1.2em;
-    padding-right: 20px;
-
   }
 .navbar a{
     color: grey;
@@ -26,39 +22,43 @@ body{
 
 }
 .nav li{
-    padding-top: 20px;
-
+    padding-top: 10px;
 }
 
 
 .type{
-    text-align: left;
-    font-size: 110%;
+    text-align: center;
+    font-size: .8em;
     color: white;
     text-transform: capitalize;
+    font-weight: 100;
+
 }
 
 .boldtype{
     font-weight: bold;
     color: white;
+    font-weight: 600;
+
 
 }
 
 .subtype{
-    text-align: left;
-    font-size: 1.2em;
+    text-align: center;
+    font-size: 1.5em;
     color: white;
+    font-weight: 100;
     border-bottom: 5px solid #e74c3c;
 
 }
 .welcome {
-    margin-top: 12%;
+    margin-top: 5%;
     color: white;
     font-weight: bold;
     font-size: 2em;
     overflow: hidden;
     width: 60%;
-    text-align: left;
+    text-align: center;
 
 }
 
@@ -68,15 +68,14 @@ body{
     background: url(../img/cta-bg.jpg);
     background-position: top;
     background-size: cover;
-    box-shadow: 1px 2px 10px 1px rgba(1,0,0,0.53);
     overflow: hidden;
+    margin-top: -15px;
 
 }
 .CallToAction{
     width: 100%;
     height: 100%;
-    background: #34495e;
-    box-shadow: 1px 2px 10px 1px rgba(1,0,0,0.53);
+    background: #1BA39C;
     text-align: center;
     text-transform: capitalize;
 
@@ -86,7 +85,7 @@ body{
     text-align: center;
     color: white;
     font-family: 'Roboto';
-
+    font-weight: 100;
 }
 
 
@@ -94,14 +93,14 @@ body{
 .phoneRound{
     border: 2px solid white;
     background: white;
-    color: black;
+    color: #16a085;
     border-radius: 100px;
     width: 60px;
     height: 60px;
-    padding-top: 10px;
     margin-right: 10px;
     text-align: center;
-
+    padding-top: 10px;
+    margin-top: -15px;
 }
 .space{
     height: 10px;
@@ -110,19 +109,29 @@ body{
     text-transform: capitalize;
     color: grey;
     font-family: 'Roboto';
+    text-align: center;
 
+}
+.showcase{
+    width:90%;
+    margin-bottom: 10px;
+    margin-left:auto;
+    margin-right:auto;
 }
 .showcase img{
     display: inline;
-     border-top: 5px solid #34495e;
     margin-top: 5px;
-    width: 245px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
+    padding:5px;
+    box-shadow: 5px 0px 0px -10px rgba(0,0,0,0.4);
+    transition:all ease-in-out 300ms;
 
 }
 .showcase img:hover{
-    display: inline;
-     border-top: 5px solid #e74c3c;
+    display: inline-block;
+    box-shadow: 5px 37px 20px -20px rgba(0,0,0,0.2);
+    transform: translate(0px, -10px);
 
 }
 .btn, .btn-warning, .btn-lg{
@@ -131,15 +140,13 @@ body{
     width: 250px;
     background: #e74c3c;
     border: none;
-    box-shadow: 1px 2px 10px 1px rgba(1,0,0,0.53);
-
+    width: 100%;
 }
 .left{
     text-align: center;
-    background: #34495e;
+    background: #1BA39C;
     color: white;
-    border: 1px solid #2c3e50;
-    box-shadow: 1px 2px 10px 1px rgba(1,0,0,0.53);
+    border: 1px solid #1BA39C;
 
 }
 
@@ -148,13 +155,12 @@ body{
     color: grey;
     background: ;
     height: 150px;
-    box-shadow: 2px 2px 10px 2px rgba(1,0,0,0.53);
 
 }
 .clientline{
-    background: #34495e;
-    color: white;
-    box-shadow: 1px 2px 10px 1px rgba(1,0,0,0.53);
+    background: #e74c3c;
+
+    color: grey;
 
 }
 
@@ -205,6 +211,8 @@ body{
     display: inline;
     list-style: none;
     padding: 10px;
+    text-align: center;
+
  }
 .footernav ul{
    text-align: center;
@@ -216,9 +224,13 @@ body{
   display: none;
     color: black;
 }
+.img-responsive{
+    width:10px;
+    height:10px;
+}
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 440px) {
   .container {
     max-width: 1024px;
   }
@@ -242,6 +254,29 @@ body{
     margin-left: 0;
     margin-right: 0;
     }
+    .welcome {
+    margin-top: 12%;
+    }
+.type{
+    font-size: 110%;
+    }
+
+.subtype{
+    font-size: 1.5em;
 
 }
+.showcase{
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.showcase img{
+    width: 167px;
+    height: 167px;
 
+}
+.btn, .btn-warning, .btn-lg{
+    width: 250px;
+}
+
+}
