@@ -1,3 +1,26 @@
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                 <a class="navbar-brand" href="{% url 'mugsandcups:index' %} "><img class="logo" src="{% static 'img/logo.png' %}" alt="logo"></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav pull-right">
+                <li><a href="{% url 'mugsandcups:index' %}">Home</a></li>
+                <li><a href="{% url 'mugsandcups:catalog' %}">Our Catalog</a></li>
+                <li><a href="{% url 'mugsandcups:about' %}">About Us</a></li>
+                <li><a href="{% url 'mugsandcups:contact' %}">Contact</a></li>
+                <li class="link follow"><a href="#/">Follow Us</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
 /**
 * @preserve HTML5 Shiv prev3.7.1 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 */

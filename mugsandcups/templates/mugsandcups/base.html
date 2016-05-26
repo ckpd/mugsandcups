@@ -4,18 +4,21 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Mugs and Cups Grenada{% endblock %}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mainstyle.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/inc/fancybox/jquery.fancybox.css' %}"/>
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/mainstyle.css' %}"/>
-
     <script src="{% static 'js/main.js' %}"></script>
+
+
 
   </head>
   <body>
@@ -24,33 +27,41 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-
-   <nav class="navbar">
-               <div class="container">
-
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-                 <a class="navbar-brand" href="{% url 'mugsandcups:index' %} "><img class="logo" src="{% static 'img/logo.png' %}" alt="logo"></a>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    <a class="navbar-brand" href="{% url 'mugsandcups:index' %} ">
+                        <img class="logo" src="{% static 'img/logo.png' %}" alt="logo">
+                    </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav pull-right">
+                    <li><a href="{% url 'mugsandcups:index' %}">Home</a></li>
+                    <li><a href="{% url 'mugsandcups:catalog' %}">Our Catalog</a></li>
+                    <li><a href="{% url 'mugsandcups:about' %}">About Us</a></li>
+                    <li><a href="{% url 'mugsandcups:contact' %}">Contact</a></li>
+                    <li class="link follow"><a href="#/">Follow Us</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav pull-right">
-            <li><a href="{% url 'mugsandcups:index' %}">Home</a></li>
-            <li><a href="{% url 'mugsandcups:catalog' %}">Our Catalog</a></li>
-            <li><a href="{% url 'mugsandcups:about' %}">About Us</a></li>
-            <li><a href="{% url 'mugsandcups:contact' %}">Contact</a></li>
-            <li class="link follow"><a href="#/">Follow Us</a></li>
-          </ul>
-        </div>
-       </div><!--/.nav-collapse -->
+        <!-- /.container -->
     </nav>
+
+
+      <div class="wide">
 
       {% block content %}
       {% endblock %}
+      </div>
 
       <div class="footer">
         <div class="footernav">
@@ -65,7 +76,10 @@
           </ul>
         </div><!--/.nav-collapse -->
         <p><span class="glyphicon glyphicon-heart"></span> All Rights reserved mugs and cups GRENADA</p>
-
       </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+
 </body>
 </html>

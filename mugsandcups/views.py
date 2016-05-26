@@ -8,7 +8,7 @@ from django.template import Context
 
 def index(request):
     testimonials = Testimonial.objects.all
-    Features = Feature.objects.all()[:8]
+    Features = Feature.objects.all()[:6]
     context = {
         'testimonials': testimonials,
         'Features': Features,
@@ -24,10 +24,10 @@ def about(request):
 
 def contact(request):
     form_class = ContactForm
-    
+
     if request.method == 'POST':
         form = form_class(data=request.POST)
-        
+
         if form.is_valid():
             contact_name = request.POST.get(
                 'contact_name'
@@ -37,7 +37,7 @@ def contact(request):
             , '')
             form_content = request.POST.get('content', '')
 
-            # Email the profile with the 
+            # Email the profile with the
             # contact information
             template = get_template('mugsandcups/contact_template.txt')
             context = Context({

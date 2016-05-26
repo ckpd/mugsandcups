@@ -31,7 +31,7 @@
 	}
 
 	.filter a {
-		color: #BD8D46;
+		color: #1BA39b;
 		font-size: .85em;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -40,11 +40,11 @@
 	}
 
 	.filter a:hover {
-		color: #B9121B;
+		color: #1BA39C;
 	}
 
 	.filter a.selected {
-		color: #B9121B;
+		color: green;
 		background: url('../img/checked.png') no-repeat 0px 3px;
 	}
 
@@ -59,13 +59,13 @@ a.thumbnail {
 a.thumbnail img {
 	width: 150px;
 	height: 150px;
-	background-color: #FCFAE1;
+	background-color: white;
 	padding: 2px;
 	box-shadow: 0px 0px 4px #BD8D46;
 }
 
 	a.thumbnail img:hover {
-		box-shadow: 0px 0px 4px #4C1B1B;
+		box-shadow: 0px 0px 4px grey;
 	}
 
 .clear_floats {

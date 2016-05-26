@@ -1,95 +1,83 @@
 {% extends 'mugsandcups/base.html' %}
 {% block content %}
 
-<div class="space"></div>
 
 <div class="main">
     <div class="row">
         <div class="col-md-12 ">
             <div class="col-md-12 actioncall">
-                     <div class=" container welcome">
-                        <p class="subtype">Mugs And Cups Grenada</p>
-                        <p class="type"><span>The fine art of <span class="boldtype">Personalizing memories</span>  for all <span  class="boldtype"> events</span> and <span class="boldtype"> occasions.</span></span></p>
-      </div>
+                     
             </div>
         </div>
     </div>
 </div>
 <div class="CallToAction">
     <div class="row">
-        <div class="col-md-12 ">
-            <a href="{% url 'mugsandcups:contact' %}"><h1><span class="glyphicon glyphicon-earphone phoneRound"></span>Let us customize your accessories for your next event</h1></a>
-        </div>
-    </div>
-</div>
-
-<div class="space"></div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 ">
-            <h1 class="showcase ">Featured</h1>
-            <hr>
+        <div class="col-md-12 clearfix ">
+            <a href="{% url 'mugsandcups:contact' %}"><h1>Mugs and CUps Grenada Let us customize your accessories for your next event</h1></a>
         </div>
     </div>
 </div>
 {% load staticfiles %}
-
-<div class="container center">
-    <div class="row">
-        <div class="col-md-12 showcase">
-                {% for Features in Features %}
-                    <img src="/media/{{Features.title}}.jpg" alt="{{Features.title}}" class="img-responsive ">
-                {% endfor %}
-        </div>
-    </div>
-
-</div>
 <div class="space"></div>
 <div class="container">
+         <!-- Portfolio Section -->
+
+        <!-- Portfolio Section -->
+        <div class="row showcase">
+            <div class="col-lg-12">
+                <h1 class="showcase line">Featured</h1>
+            </div>
+            {% load staticfiles %}
+                {% for Features in Features %}
+
+            <div class="col-md-4 col-sm-6">
+                    <img src="/media/{{Features.title}}.jpg" alt="{{Features.title}}" class="img-responsive img-portfolio img-hover">
+            </div>    
+                            {% endfor %}             
+
+        </div>
+        <!-- /.row -->
+               <!-- Portfolio Section -->
+        <!-- /.row -->
     <div class="row">
         <div class="col-md-12">
                     <p style="text-align:center;"><a class="btn btn-warning btn-lg" href="{% url 'mugsandcups:catalog' %}" role="button">Go To Catalog</a></p>
         </div>
     </div>
    <hr>
-</div>
-
-<div class="container">
-
-
-
 
     <div class="row">
-            <div class="col-md-3 testimonials left">
-            <h1>Testimonials</h1>
-            <p>this is what our clients are saying about us.</p>
-        </div>
-     <div class="testimonials col-md-9">
-        <div class="item">
-            <blockquote>
-                <p><strong>to cite (verb)</strong>: to acknowledge (give credit to) the original author or artist by providing a reference.</p>
-                <cite>Someone Said<br />
-                <a href="#"></a></cite> </blockquote>
-            </div>
-            <div class="item">
-                <blockquote>
-                    <p><strong>citation (noun)</strong>: a properly formatted line of text that indicates the source for a quote, idea, fact etc. that you use.</p>
-                    <cite>Someone Said<br />
-                    <a href="#"></a></cite>
+            <div class="col-lg-12">
+                <div class="col-lg-4 testimonials left">
+                    <h1>Testimonials</h1>
+                    <p>this is what our clients are saying about us.</p>
+                </div>
+                <div class="testimonials col-md-8">
+                <div class="item">
+                    <blockquote>
+                        <p><strong>to cite (verb)</strong>: to acknowledge (give credit to) the original author or artist by providing a reference.</p>
+                        <cite>Someone Said<br />
+                        <a href="#"></a></cite> </blockquote>
+                    </div>
+                    <div class="item">
+                        <blockquote>
+                            <p><strong>citation (noun)</strong>: a properly formatted line of text that indicates the source for a quote, idea, fact etc. that you use.</p>
+                            <cite>Someone Said<br />
+                            <a href="#"></a></cite>
                 </blockquote>
              </div>
         </div>
     </div>
-</div>
+    </div>
 <div class="space"></div>
-<div class="container">
+
     <div class="row">
-        <div class="col-md-12 clientline">
-            <h1 class="showcase">Our Clients</h1>
+        <div class="col-lg-12 ">
+            <h1 class="showcase line">Our Clients</h1>
         </div>
     </div>
-</div>
-<div class="container">
+        
     <div class="row">
         <div class="col-md-12 clients">
             <div class="space"></div>
@@ -98,10 +86,11 @@
             <ul>
                 {% for testimonial in testimonials %}
                     <li><img src="/media/{{testimonial.title}}.jpg" alt="{{testimonial.title}}"></li>
+                   
                 {% endfor %}
             </ul>
     </div>
-</div>
+    </div>
 </div>
             <div class="space"></div>
 
